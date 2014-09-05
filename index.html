@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Widget</title>
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<div class="widget">
+  <!-- <a href="http://wunderground.com"> -->  
+  <div class="weather_widget">
+    <span class="weather_string">Weather Text</span>
+    <p class="temp"> <span class="temp_c">##</span>&#176;C</p>
+    <p class="city_name">City Name</p>
+    <p class="date_time">Date and Time</p>
+  </div>
+  <!-- </a> -->
+
+   <form action="" class="weatherInput">
+    <input type="text" name="city" placeholder="City, Country">
+    <input type="submit" value="Show me the weather!">
+  </form>
+</div>
+ 
+
+<span class="thing thing1"></span>
+<span class="thing thing2"></span>
+<span class="thing thing3"></span>
+<span class="thing thing4"></span>
+<span class="thing thing5"></span>
+<span class="thing thing6"></span>
+<span class="thing thing7"></span>
+<span class="thing thing8"></span>
+<span class="thing thing9"></span>
+<span class="thing thing10"></span>
+<span class="thing thing11"></span>
+<span class="thing thing12"></span>
+<span class="thing thing13"></span>
+<span class="thing thing14"></span>
+<span class="thing thing15"></span>
+<span class="thing thing16"></span>
+<span class="thing thing17"></span>
+<span class="thing thing18"></span>
+<span class="thing thing19"></span>
+<span class="thing thing20"></span>
+<span class="thing thing21"></span>
+<span class="thing thing22"></span>
+<span class="thing thing23"></span>
+<span class="thing thing24"></span>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="weather-app.js"></script>
+
+</body>
+</html>
+
+
+<style>
+
+  .clearfix:after {
+     content: " ";
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+  }
+
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+  input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+html {
+  min-height:100%;
+}
+
+  body {
+    background-image: url("weathervane15.jpg");
+    font-family: 'Old Standard TT', serif;
+    min-height: 100%;
+    min-width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    /*position: relative;*/
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  .widget {
+    margin-top: 45%;
+    margin-left: 5%;
+    width: 400px;
+  }
+
+  .weather_widget {
+    width: 400px;
+    height: 200px;
+    background: rgba(239, 239, 239, 0.48);
+    padding: 3%;
+    box-shadow: 1px 1px 3px #D5A64E;
+    display: none;
+  }
+  
+
+  a {
+    text-decoration: none;
+  }
+
+  span.weather_string {
+    font-size: 30px;
+  }
+
+  form.weatherInput {
+    /*margin-left: 5%;*/
+  }
+
+
+  input {
+    /*margin:2%;*/
+  }
+
+    input[type=text] {
+      margin: 2% 0 2% 0;
+      padding: 3%;
+      width: 400px;
+      background: rgba(239, 239, 239, 0.48);
+      border: none;
+    }
+
+    input[type=submit] {
+      float: right;
+    }
+
+  .thing {
+        position: absolute;
+        font-size:40px;
+        color:black;
+        top:-100px;
+        /*-webkit-animation:thing 3s linear infinite; this doesn't work*/
+  }
+
+@-webkit-keyframes thing {
+     0% {
+         top :0;
+         /*-webkit-transform:scale(2);*/
+     }
+     20%, 40%, 60%, 80% {
+         margin-left: 100px;
+         /*-webkit-transform:scale(0.1);*/
+     }
+     10%, 30%, 50%, 70%, 90% {
+         margin-left: 10px;
+         /*-webkit-transform:scale(5);*/
+     }
+     100% {
+         top:100%;
+         /*-webkit-transform:scale(1);*/
+     }
+}
+
+
+
+.cloud:after {
+  content:"\2601";
+  color:deepskyblue;
+}
+
+.sunny:after {
+  content:"\2600";
+  color:gold;
+}
+
+.rain:after {
+  content:"\2602";
+  color:black;
+}
+
+.snow:after {
+  content:"\2603";
+  color:snow;
+}
+
+.death:after {
+  content:"\2620";
+  color:dimgray;
+}
+
+</style>
+
+
